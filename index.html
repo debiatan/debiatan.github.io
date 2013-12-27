@@ -1,117 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Transition Dreams</title>
-        <link rel="stylesheet" href="http://blog.debiatan.net/theme/css/main.css" />
-        <link href="http://blog.debiatan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Transition Dreams Atom Feed" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Miguel Lechón" />
+        <meta name="copyright" content="Miguel Lechón" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
-
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://blog.debiatan.net/">Transition Dreams </a></h1>
-                <nav><ul>
-                    <li><a href="http://blog.debiatan.net/category/test.html">Test</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://blog.debiatan.net/test-post.html">Test post</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2013-12-17T19:24:00">
-                Tue 17 December 2013
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://blog.debiatan.net/author/miguel-lechon.html">Miguel Lechón</a>
-        </address>
-<p>In <a href="http://blog.debiatan.net/category/test.html">Test</a>. </p>
-<p>tags: <a href="http://blog.debiatan.net/tag/test.html">test</a></p>
-</footer><!-- /.post-info --><p>Placeholder text</p>
-<div class="highlight"><pre><span class="n">post</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">itertools</span>
-
-<span class="k">def</span> <span class="nf">rule_I</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s">&#39;I&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="p">()</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="s">&#39;U&#39;</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">rule_II</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">&#39;M&#39;</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="p">()</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">substitute_each_occurrence</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">new_ss</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; s: string, ss: substring, new_ss: new substring &quot;&quot;&quot;</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">n_ss</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
-
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="n">n_ss</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n_ss</span><span class="p">]</span> <span class="o">==</span> <span class="n">ss</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">new_ss</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">n_ss</span><span class="p">:])</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="k">def</span> <span class="nf">rule_III</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">substitute_each_occurrence</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&#39;III&#39;</span><span class="p">,</span> <span class="s">&#39;U&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">rule_IV</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">substitute_each_occurrence</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&#39;UU&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">derive</span><span class="p">(</span><span class="n">axiom</span><span class="p">,</span> <span class="n">target_theorem</span><span class="p">,</span> <span class="n">rules</span><span class="p">):</span>
-    <span class="n">derivation</span> <span class="o">=</span> <span class="p">{</span><span class="n">axiom</span><span class="p">:[]}</span> <span class="c"># Shortest chain of rules needed to reach a theorem</span>
-    <span class="n">theorems</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">axiom</span><span class="p">])</span>
-    <span class="k">while</span> <span class="n">target_theorem</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">theorems</span><span class="p">:</span> <span class="c"># Breadth-first search</span>
-        <span class="k">for</span> <span class="n">theorem</span><span class="p">,</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">theorems</span><span class="p">),</span> <span class="n">rules</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">new_theorem</span> <span class="ow">in</span> <span class="n">rule</span><span class="p">(</span><span class="n">theorem</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">new_theorem</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">theorems</span><span class="p">:</span>
-                    <span class="n">theorems</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_theorem</span><span class="p">)</span>
-                    <span class="n">derivation</span><span class="p">[</span><span class="n">new_theorem</span><span class="p">]</span> <span class="o">=</span> <span class="n">derivation</span><span class="p">[</span><span class="n">theorem</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">rule</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="p">[</span><span class="n">rule</span><span class="o">.</span><span class="n">__name__</span> <span class="k">for</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">derivation</span><span class="p">[</span><span class="n">target_theorem</span><span class="p">]]</span>
-
-
-<span class="n">rule_chain</span> <span class="o">=</span> <span class="n">derive</span><span class="p">(</span><span class="n">axiom</span><span class="o">=</span><span class="s">&#39;MI&#39;</span><span class="p">,</span> <span class="n">target_theorem</span><span class="o">=</span><span class="s">&#39;MUIIU&#39;</span><span class="p">,</span>
-                    <span class="n">rules</span> <span class="o">=</span> <span class="p">(</span><span class="n">rule_I</span><span class="p">,</span> <span class="n">rule_II</span><span class="p">,</span> <span class="n">rule_III</span><span class="p">,</span> <span class="n">rule_IV</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">rule_chain</span><span class="p">)</span>
-</pre></div>
-<p>Placeholder text 2</p>
-<p>There are <a href="http://blog.debiatan.net/test-post.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://blog.debiatan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-
-                            <li><a href="https://twitter.com/debiatan">twitter</a></li>
-                            <li><a href="https://github.com/debiatan">github</a></li>
+        <title>Transition Dreams
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://blog.debiatan.net/theme/css/elegant.css" media="screen">
+        <link href="http://blog.debiatan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Transition Dreams - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://blog.debiatan.net/"><span class=site-name>Transition Dreams</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li  class="active"><a href="http://blog.debiatan.net">Home</a></li>
+                            <li ><a href="http://blog.debiatan.net/categories.html">Categories</a></li>
+                            <li ><a href="http://blog.debiatan.net/tags.html">Tags</a></li>
+                            <li ><a href="http://blog.debiatan.net/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://blog.debiatan.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    <div class="row-fluid">
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+    </div>
 
-<script type="text/javascript">
-    var disqus_shortname = 'blogdebiatannet';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+    <div class="row-fluid">
+        <div class="span12">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="http://blog.debiatan.net/archives.html">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <article>
+                <a href="http://blog.debiatan.net/test-post.html">Test post  </a>
+                <section>
+                    posted in
+                <a href="http://blog.debiatan.net/categories.html#test-ref">Test</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2013-12-17T19:24:00">Tue 17 December 2013</time>
+                </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
 </html>
