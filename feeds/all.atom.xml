@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Transition Dreams</title><link href="http://blog.debiatan.net/" rel="alternate"></link><link href="http://blog.debiatan.net/feeds/all.atom.xml" rel="self"></link><id>http://blog.debiatan.net/</id><updated>2013-12-17T19:24:00+01:00</updated><entry><title>Test post</title><link href="http://blog.debiatan.net/test-post.html" rel="alternate"></link><updated>2013-12-17T19:24:00+01:00</updated><author><name>Miguel Lechón</name></author><id>tag:blog.debiatan.net,2013-12-17:test-post.html</id><summary type="html">&lt;p&gt;Placeholder text&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Transition Dreams</title><link href="http://blog.debiatan.net/" rel="alternate"></link><link href="http://blog.debiatan.net/feeds/all.atom.xml" rel="self"></link><id>http://blog.debiatan.net/</id><updated>2014-01-02T10:00:00+01:00</updated><entry><title>xrobot</title><link href="http://blog.debiatan.net/xrobot.html" rel="alternate"></link><updated>2014-01-02T10:00:00+01:00</updated><author><name>Miguel Lechón</name></author><id>tag:blog.debiatan.net,2014-01-02:xrobot.html</id><summary type="html">&lt;p&gt;Placeholder text&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="vimeo" align="left"&gt;&lt;iframe width="420" height="315" src="https://player.vimeo.com/video/59126311" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt;
@@ -47,4 +47,4 @@
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rule_chain&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Placeholder text 2&lt;/p&gt;
-</summary><category term="test"></category></entry></feed>
+</summary><category term="xrobot"></category></entry></feed>
