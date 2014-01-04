@@ -9,6 +9,10 @@
 &lt;li&gt;Capture the screen&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The &lt;tt class="docutils literal"&gt;xrobot&lt;/tt&gt; library is lean, simple and Python[23]-compliant. It is just a wrapper around functions defined inside &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;python-xlib&lt;/span&gt;&lt;/tt&gt;. Since Xlib screen capture is painfully slow, the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;python-gtk&lt;/span&gt;&lt;/tt&gt; bindings are used instead, if present. I have decided to return images as &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; arrays for my convenience; if you find that dependency unbearable, you can root it out easily from the code.&lt;/p&gt;
+&lt;div class="flex-video widescreen" style="margin: 0 auto;text-align:center;"&gt;
+&lt;iframe src="//player.vimeo.com/video/83220240" frameborder="0" title="5000 clicks" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p class="caption-text"&gt;Here's me, at five hundred clicks/second.&lt;/p&gt;
 &lt;p&gt;I leave you with a &lt;a class="reference external" href="https://github.com/debiatan/xrobot"&gt;link to the xrobot github repository&lt;/a&gt; and some sample code:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;xrobot&lt;/span&gt;
 
