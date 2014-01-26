@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Transition Dreams</title><link href="http://blog.debiatan.net/" rel="alternate"></link><link href="http://blog.debiatan.net/feeds/games.atom.xml" rel="self"></link><id>http://blog.debiatan.net/</id><updated>2014-01-26T15:00:00+01:00</updated><entry><title>Gradius meets Twister</title><link href="http://blog.debiatan.net/gradius-meets-twister.html" rel="alternate"></link><updated>2014-01-26T15:00:00+01:00</updated><author><name>Miguel Lechón</name></author><id>tag:blog.debiatan.net,2014-01-26:gradius-meets-twister.html</id><summary type="html">&lt;img alt="Screenshot from the game" src="images/gradius_meets_twister.png" /&gt;
+&lt;p&gt;This post &lt;em&gt;will&lt;/em&gt; describe my entry for this year's Global Game Jam, once I get some sleep.&lt;/p&gt;
+&lt;p&gt;In the meantime, if you want to give it a go, point your browser (Chrome recommended) to &lt;a class="reference external" href="http://www.codeskulptor.org/#user28_Z3QPgd5jeF_96.py"&gt;this address&lt;/a&gt; and press play.&lt;/p&gt;
+</summary><category term="codeskulptor python game"></category></entry></feed>
