@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Transition Dreams</title><link href="http://blog.debiatan.net/" rel="alternate"></link><link href="http://blog.debiatan.net/feeds/games.atom.xml" rel="self"></link><id>http://blog.debiatan.net/</id><updated>2014-01-27T20:00:00+01:00</updated><entry><title>Gradius meets Twister</title><link href="http://blog.debiatan.net/gradius-meets-twister.html" rel="alternate"></link><updated>2014-01-27T20:00:00+01:00</updated><author><name>Miguel Lechón</name></author><id>tag:blog.debiatan.net,2014-01-27:gradius-meets-twister.html</id><summary type="html">&lt;p&gt;This weekend I participated in the sixth edition of the &lt;a class="reference external" href="http://globalgamejam.org/"&gt;Global Game Jam&lt;/a&gt; . The goal of the event was to create a game related in some way to a given theme in 48 hours. This year's theme was &lt;em&gt;We don't see things as they are, we see them as we are&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to go for a multiplayer Gradius clone in which collisions with enemies remap your controls. I developed it using &lt;a class="reference external" href="http://www.codeskulptor.org/"&gt;CodeSkulptor&lt;/a&gt;, which is basically a Python interpreter running on top of Javascript. Needless to say, it's no speed demon. See for yourself:&lt;/p&gt;
+&lt;div class="flex-video widescreen" style="margin: 0 auto;text-align:center;"&gt;
+&lt;iframe src="//player.vimeo.com/video/85182232" frameborder="0" title="Gradius meets Twister" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;If you want to give it a try, I have two suggestions to make:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Find someone to play against (otherwise is going to look as sad as my single player game above).&lt;/li&gt;
+&lt;li&gt;Run it on Chrome.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's the &lt;a class="reference external" href="http://www.globalgamejam.org/2014/games/gradius-meets-twister"&gt;profile of the game at the GGJ webpage&lt;/a&gt; and &lt;a class="reference external" href="http://www.codeskulptor.org/#user28_Z3QPgd5jeF_97.py"&gt;a link to the game&lt;/a&gt;. Enjoy!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Looks like &lt;a class="reference external" href="https://gamejambcn.com/gjb-2014/resultats/"&gt;my game placed third&lt;/a&gt; on the local vote we held after the Jam! Hooray!&lt;/p&gt;
+</summary><category term="codeskulptor"></category><category term="game"></category><category term="GGJ"></category></entry></feed>
