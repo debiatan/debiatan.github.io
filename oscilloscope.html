@@ -6,8 +6,8 @@
         <meta name="author" content="Miguel Lechón" />
         <meta name="copyright" content="Miguel Lechón" />
 
-<meta name="keywords" content="unit tests, SIGBOVIK, automatic programming, tools, " />
-        <title>Unit-Test-Based Programming  - SIGBOVIK 2014  · Transition Dreams
+<meta name="keywords" content="arduino, oscilloscope, tools, " />
+        <title>Oscilloscope  - Who needs yet another Arduino oscilloscope?  · Transition Dreams
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -44,30 +44,30 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span12 offset0">
-    <h1><a href="http://blog.debiatan.net/utbp.html"> Unit-Test-Based Programming  <small> SIGBOVIK 2014 </small>  </a></h1>
+    <h1><a href="http://blog.debiatan.net/oscilloscope.html"> Oscilloscope  <small> Who needs yet another Arduino oscilloscope? </small>  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span10 offset0 article-content">
 
-            <p>UTBP is a new subparadigm of Declarative Programming, in which code is generated from a description of its intended behavior, specified through unit tests. This work was presented at <a class="reference external" href="http://www.sigbovik.org/2014/">SIGBOVIK 2014</a> and received the <em>Most Frighteningly Like Real Research</em> Award.</p>
-<p>For an in-depth tour of UTBP, you can check <a class="reference external" href="https://github.com/debiatan/utbp/blob/master/doc/article.pdf">the article</a> and browse the <a class="reference external" href="https://github.com/debiatan/utbp">associated GitHub repository</a>. If you prefer a light introduction, you can choose between two versions of the same video. This one is dubbed:</p>
-<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-<iframe src="//player.vimeo.com/video/89179353" frameborder="0" title="Unit-Test-Based Programming -- English dubbing" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p>It seems that building an oscilloscope on top of an Arduino board is some sort of rite of passage. Do a <a class="reference external" href="https://duckduckgo.com/?q=arduino+oscilloscope">duckduckgo</a> search and you will see that all the good names for this kind of project are already taken, so I have decided to name mine just <em>oscilloscope</em>. In my defense, I'll say that I have written mine because I needed the most basic of oscilloscopes and it's just easier to build one from scratch than to adapt some already existing code.</p>
+<p>I've written my oscilloscope code it in order to inspect a single-channel periodic signal with a frequency close to 250 Hz. My first trivial attempt at the task already recorded the signal at 5 kHz and transmitted it over USB without the need to buffer data in the RAM of the microcontroller, so I haven't bothered speeding it up.</p>
+<p>The main bottleneck in my case is the serial transmission. Trying to collect more than 5800 samples per second will likely result in the loss of some of them. I've written some extra code that checks for missing samples, but it never detects problems at 5 kHz and, frankly, I'm OK with twenty samples per cycle.</p>
+<p>All in all, putting together the <tt class="docutils literal">C</tt> firmware and the <tt class="docutils literal">Python</tt> client, the project takes less than 130 lines. The program that checks for periodicity, finds the frequency and aligns the cycles to display them adds 90 extra lines. The output of this program looks like this:</p>
+<div class="figure align-center">
+<img alt="Jiggling periodic wave" src="images/oscilloscope.gif" style="width: 406.0px; height: 306.0px;" />
+<p class="caption">Visualization of several cycles of a PWM signal at 250 Hz after going through a simple RC circuit.</p>
 </div>
-<p>This one is subbed:</p>
-<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-<iframe src="//player.vimeo.com/video/89182858" frameborder="0" title="Unit-Test-Based Programming -- English subtitles" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+<p>Here's the <a class="reference external" href="https://github.com/debiatan/oscilloscope">link to the github repository</a>.</p>
 
             <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="utbp"
-                href="http://blog.debiatan.net/utbp.html#disqus_thread">
+                    data-disqus-identifier="oscilloscope"
+                href="http://blog.debiatan.net/oscilloscope.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -77,8 +77,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'blogdebiatannet';
-        var disqus_identifier = 'utbp';
-    var disqus_url = 'http://blog.debiatan.net/utbp.html';
+        var disqus_identifier = 'oscilloscope';
+    var disqus_url = 'http://blog.debiatan.net/oscilloscope.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -101,18 +101,15 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;text-align:right;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2014-04-01T10:00:00+02:00">Apr 1, 2014</time>
+            <time pubdate="pubdate" datetime="2015-11-25T18:00:00+01:00">Nov 25, 2015</time>
             <h4>Category</h4>
             <a class="category-link" href="http://blog.debiatan.net/categories.html#tools-ref">tools</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://blog.debiatan.net/tags.html#automatic-programming-ref">automatic programming
+                <li><a href="http://blog.debiatan.net/tags.html#arduino-ref">arduino
                     <span>1</span>
 </a></li>
-                <li><a href="http://blog.debiatan.net/tags.html#sigbovik-ref">SIGBOVIK
-                    <span>1</span>
-</a></li>
-                <li><a href="http://blog.debiatan.net/tags.html#unit-tests-ref">unit tests
+                <li><a href="http://blog.debiatan.net/tags.html#oscilloscope-ref">oscilloscope
                     <span>1</span>
 </a></li>
             </ul>

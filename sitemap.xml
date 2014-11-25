@@ -5,56 +5,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.debiatan.net/index.html</loc>
-<lastmod>2014-08-25T02:18:14-00:00</lastmod>
+<lastmod>2014-11-25T19:26:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/archives.html</loc>
-<lastmod>2014-08-25T02:18:14-00:00</lastmod>
+<lastmod>2014-11-25T19:26:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/tags.html</loc>
-<lastmod>2014-08-25T02:18:14-00:00</lastmod>
+<lastmod>2014-11-25T19:26:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/categories.html</loc>
-<lastmod>2014-08-25T02:18:14-00:00</lastmod>
+<lastmod>2014-11-25T19:26:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
+<loc>http://blog.debiatan.net/oscilloscope.html</loc>
+<lastmod>2015-11-25T18:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.debiatan.net/guybrush.html</loc>
-<lastmod>2014-08-25T08:00:00-00:00</lastmod>
+<lastmod>2014-08-25T08:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/utbp.html</loc>
-<lastmod>2014-04-01T10:00:00-00:00</lastmod>
+<lastmod>2014-04-01T10:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/gradius-meets-twister.html</loc>
-<lastmod>2014-01-27T20:00:00-00:00</lastmod>
+<lastmod>2014-01-27T20:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.debiatan.net/xrobot.html</loc>
-<lastmod>2014-01-02T10:00:00-00:00</lastmod>
+<lastmod>2014-01-02T10:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
