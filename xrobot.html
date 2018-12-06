@@ -62,26 +62,26 @@
 </ul>
 <p>The <tt class="docutils literal">xrobot</tt> library is lean, simple and Python[23]-compliant. It is just a wrapper around functions defined inside <tt class="docutils literal"><span class="pre">python-xlib</span></tt>. Since Xlib screen capture is painfully slow, the <tt class="docutils literal"><span class="pre">python-gtk</span></tt> bindings are used instead, if present. I have decided to return images as <tt class="docutils literal">numpy</tt> arrays for my convenience; if you find that dependency unbearable, you can root it out easily from the code.</p>
 <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-<iframe src="//player.vimeo.com/video/83220240" frameborder="0" title="5000 clicks" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/83220240?app_id=122963" frameborder="0" title="5000 clicks" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>
 <p class="caption-text">Here's me, at five hundred clicks/second.</p>
 <p>I leave you with a <a class="reference external" href="https://github.com/debiatan/xrobot">link to the xrobot github repository</a> and some sample code:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">xrobot</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xrobot</span>
 
 <span class="n">xr</span> <span class="o">=</span> <span class="n">xrobot</span><span class="o">.</span><span class="n">XRobot</span><span class="p">()</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">XRobot</span><span class="p">()</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">mouse_pos</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Current mouse position: x =&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Current mouse position: x =&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>              <span class="c"># Press and release &#39;a&#39;</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">key_down</span><span class="p">(</span><span class="s">&#39;comma&#39;</span><span class="p">)</span>     <span class="c"># Press &#39;,&#39;</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">key_up</span><span class="p">(</span><span class="s">&#39;comma&#39;</span><span class="p">)</span>       <span class="c"># Release &#39;,&#39;</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>              <span class="c1"># Press and release &#39;a&#39;</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">key_down</span><span class="p">(</span><span class="s1">&#39;comma&#39;</span><span class="p">)</span>     <span class="c1"># Press &#39;,&#39;</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">key_up</span><span class="p">(</span><span class="s1">&#39;comma&#39;</span><span class="p">)</span>       <span class="c1"># Release &#39;,&#39;</span>
 
 <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">screen_resolution</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Screen width:&#39;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="s">&#39;Screen height:&#39;</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Screen width:&#39;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="s1">&#39;Screen height:&#39;</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">capture_screen</span><span class="p">()</span>
 <span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>

@@ -56,7 +56,7 @@
 <p>What drove me to use libdwarf was Eli Bendersky's <a class="reference external" href="http://eli.thegreenplace.net/2011/02/07/how-debuggers-work-part-3-debugging-information">third article on debugging and linux</a> (the other two talk about <a class="reference external" href="http://eli.thegreenplace.net/2011/01/23/how-debuggers-work-part-1">ptrace</a> and <a class="reference external" href="http://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints">implementing breakpoints</a>) That article advises against trying to parse the DWARF section of an executable manually, arguing that DWARF is a very complex format, requiring the implementation of two &quot;specialized virtual machines&quot; to decode location data and line number data. I read that and thought &quot;sure, let's give libdwarf a try&quot;.</p>
 <p>While a cursory look at the DWARF spec makes me believe that libdwarf does, in fact, hide some of the complexity of the DWARF format, I've found that its API carries its own set of problems, particularly on the memory management side of things. The main complaint I have is that every time I make a call to libdwarf, it allocates space for the response under an opaque pointer and asks <em>me</em> to remember the type of the request, so that later I can ask the library to free that memory. The natural consequence of such a design is that two thirds of the code that I write to interface with libdwarf end up being spent managing memory outside of my control.</p>
 <p>This example, extracted from the official documentation, illustrates my point (I've added the last <tt class="docutils literal">else if</tt> branch to avoid leaking memory through the error descriptor):</p>
-<div class="highlight"><pre><span class="kt">void</span> <span class="nf">example1</span><span class="p">(</span><span class="n">Dwarf_Die</span> <span class="n">somedie</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">example1</span><span class="p">(</span><span class="n">Dwarf_Die</span> <span class="n">somedie</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Dwarf_Debug</span> <span class="n">dbg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">Dwarf_Signed</span> <span class="n">atcount</span><span class="p">;</span>
     <span class="n">Dwarf_Attribute</span> <span class="o">*</span><span class="n">atlist</span><span class="p">;</span>
@@ -85,15 +85,15 @@
 Use of the component's resource management (memory, file, string, etc.) is completely optional.</blockquote>
 <p>In order to sidestep this issue, I've decided to modify libdwarf and make it use my own custom allocator functions, effectively taking control of memory back from the library. The last revision of libdwarf (January, 2016) makes 34 calls to <tt class="docutils literal">malloc</tt>, 10 to <tt class="docutils literal">calloc</tt>, 1 call to <tt class="docutils literal">realloc</tt> and under 100 calls to <tt class="docutils literal">free</tt>. I've gotten rid of the <tt class="docutils literal">realloc</tt> call, which  was only there because of some sloppy coding, and I've replaced the rest with calls to functions specified by the user through three extra parameters I've added to <tt class="docutils literal">dwarf_init</tt>.</p>
 <p>My use case for libdwarf consists on parsing the whole binary in one go, building my own intermediate representation of the debugging information and, once I'm done, discarding all memory allocated through that library. That allows me to make my <tt class="docutils literal">malloc</tt> and <tt class="docutils literal">calloc</tt> functions use a simple stack allocator and to replace <tt class="docutils literal">free</tt> with an empty function. Here's a barebones example of the way I use the tweaked libdwarf:</p>
-<div class="highlight"><pre><span class="cm">/* Compile with: clang -std=c++11 -Wl,-export-dynamic,-rpath=. libdwarf.so \</span>
+<div class="highlight"><pre><span></span><span class="cm">/* Compile with: clang -std=c++11 -Wl,-export-dynamic,-rpath=. libdwarf.so \</span>
 <span class="cm">   example.cc -o example -lelf */</span>
 
-<span class="cp">#include &lt;stdint.h&gt;</span>
-<span class="cp">#include &lt;stdlib.h&gt;</span>
-<span class="cp">#include &lt;string.h&gt;</span>
-<span class="cp">#include &lt;fcntl.h&gt;</span>
-<span class="cp">#include &lt;assert.h&gt;</span>
-<span class="cp">#include &quot;libdwarf.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;assert.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;libdwarf.h&quot;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="n">MemoryArena</span><span class="p">{</span>
     <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">base</span><span class="p">;</span>
