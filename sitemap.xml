@@ -4,98 +4,98 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://blog.debiatan.net/index.html</loc>
-<lastmod>2018-12-06T16:01:38-00:00</lastmod>
+<loc>https://blog.debiatan.net/index.html</loc>
+<lastmod>2018-12-06T16:09:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/archives.html</loc>
-<lastmod>2018-12-06T16:01:38-00:00</lastmod>
+<loc>https://blog.debiatan.net/archives.html</loc>
+<lastmod>2018-12-06T16:09:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/tags.html</loc>
-<lastmod>2018-12-06T16:01:38-00:00</lastmod>
+<loc>https://blog.debiatan.net/tags.html</loc>
+<lastmod>2018-12-06T16:09:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/categories.html</loc>
-<lastmod>2018-12-06T16:01:38-00:00</lastmod>
+<loc>https://blog.debiatan.net/categories.html</loc>
+<lastmod>2018-12-06T16:09:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/libdwarf_with_custom_memory_allocators.html</loc>
+<loc>https://blog.debiatan.net/libdwarf_with_custom_memory_allocators.html</loc>
 <lastmod>2016-02-23T19:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/a_limitation_of_gdb_frontends.html</loc>
+<loc>https://blog.debiatan.net/a_limitation_of_gdb_frontends.html</loc>
 <lastmod>2016-02-17T19:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/inDRM.html</loc>
+<loc>https://blog.debiatan.net/inDRM.html</loc>
 <lastmod>2015-04-01T10:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/five-weeks-of-handmade-hero.html</loc>
+<loc>https://blog.debiatan.net/five-weeks-of-handmade-hero.html</loc>
 <lastmod>2015-03-13T13:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/acampa-como-puedas.html</loc>
+<loc>https://blog.debiatan.net/acampa-como-puedas.html</loc>
 <lastmod>2015-01-27T07:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/oscilloscope.html</loc>
+<loc>https://blog.debiatan.net/oscilloscope.html</loc>
 <lastmod>2014-11-25T18:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/guybrush.html</loc>
+<loc>https://blog.debiatan.net/guybrush.html</loc>
 <lastmod>2014-08-25T08:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/utbp.html</loc>
+<loc>https://blog.debiatan.net/utbp.html</loc>
 <lastmod>2014-04-01T10:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/gradius-meets-twister.html</loc>
+<loc>https://blog.debiatan.net/gradius-meets-twister.html</loc>
 <lastmod>2014-01-27T20:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.debiatan.net/xrobot.html</loc>
+<loc>https://blog.debiatan.net/xrobot.html</loc>
 <lastmod>2014-01-02T10:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
